@@ -74,7 +74,7 @@ class _signInPageState extends State<signInPage> {
           Container(
             margin: EdgeInsets.only(top: duSetHeight(15)),
             child: Text(
-              '菜菜',
+              '菜菜子',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: AppColors.primaryText,
