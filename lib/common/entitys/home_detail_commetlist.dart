@@ -73,8 +73,6 @@ class Commentlist {
     required this.likesnum,
     required this.likestate,
     required this.time,
-    required this.writebacklist,
-    required this.writebacklistnum,
   });
 
   String iconurl;
@@ -83,8 +81,6 @@ class Commentlist {
   String likesnum;
   String likestate;
   String time;
-  List<Writebacklist> writebacklist;
-  String writebacklistnum;
 
   factory Commentlist.fromJson(Map<String, dynamic> json) => Commentlist(
         iconurl: json["iconurl"],
@@ -93,9 +89,6 @@ class Commentlist {
         likesnum: json["likesnum"],
         likestate: json["likestate"],
         time: json["time"],
-        writebacklist: List<Writebacklist>.from(
-            json["writebacklist"].map((x) => Writebacklist.fromJson(x))),
-        writebacklistnum: json["writebacklistnum"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -105,9 +98,6 @@ class Commentlist {
         "likesnum": likesnum,
         "likestate": likestate,
         "time": time,
-        "writebacklist":
-            List<dynamic>.from(writebacklist.map((x) => x.toJson())),
-        "writebacklistnum": writebacklistnum,
       };
 }
 
