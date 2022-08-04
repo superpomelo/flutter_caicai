@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_caicai/common/apis/home.dart';
 import 'package:flutter_caicai/common/entitys/entitys.dart';
 import 'package:flutter_caicai/common/entitys/home_detail_commetlist.dart';
+import 'package:flutter_caicai/common/entitys/home_detail_subcommentlist.dart';
 import 'package:flutter_caicai/common/utils/utils.dart';
 import 'package:flutter_caicai/common/values/values.dart';
 import 'package:flutter_caicai/common/widgets/widgets.dart';
+import 'package:flutter_caicai/pages/main/details/view/commet_sub_widget.dart';
 import 'package:flutter_caicai/pages/main/main_detail_appbar_widget.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -32,6 +34,7 @@ class _HomeDetailPageState extends State<HomeDetailPage> {
       islike: "");
   CommetlistData _commetlistData =
       CommetlistData(totalcommentnum: "110", commentlist: []);
+  SubData _subData = SubData(writebacklist: [], writebacklistnum: '0');
   @override
   void initState() {
     super.initState();
@@ -48,10 +51,15 @@ class _HomeDetailPageState extends State<HomeDetailPage> {
         HomeDetailCommentlistRequestEntity(id: "1");
     HomeDetailCommentlistResponseEntity commentlist =
         await TuiJAPI.homedetailcommentlist(params: commentlistparams);
-
+    HomeDetailSubcommentlistRequestEntity subcommentlistparams =
+        HomeDetailSubcommentlistRequestEntity(
+            fid: '1', page: '1', pagesize: '10');
+    HomeDetailSubcommentlistEntity subcommentlist =
+        await TuiJAPI.homedetailsubcommentlist(params: subcommentlistparams);
     setState(() {
       _detailData = detail.data;
       _commetlistData = commentlist.data;
+      _subData = subcommentlist.data!;
     });
   }
 
@@ -350,11 +358,12 @@ class _HomeDetailPageState extends State<HomeDetailPage> {
                         ],
                       ),
                     ),
+                    buildsubwidget(_subData.writebacklist!),
                     //展开更多回复
                     Container(
                       margin: EdgeInsets.fromLTRB(duSetWidth(100), 15, 15, 15),
                       child: Text(
-                        "展开 3 条回复",
+                        "展开更多回复",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontFamily: 'Avenir',

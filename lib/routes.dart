@@ -2,7 +2,7 @@ import 'package:flutter_caicai/common/entitys/menu_detail_confirm.dart';
 import 'package:flutter_caicai/main.dart';
 import 'package:flutter_caicai/pages/application/application_float.dart';
 import 'package:flutter_caicai/pages/lost_password/lost_password.dart';
-import 'package:flutter_caicai/pages/main/main_detail.dart';
+import 'package:flutter_caicai/pages/main/details/main_detail.dart';
 import 'package:flutter_caicai/pages/menu/menu_detail.dart';
 import 'package:flutter_caicai/pages/menu/menu_detail_confirm.dart';
 import 'package:flutter_caicai/pages/menu/menu_detail_confirm_result.dart';

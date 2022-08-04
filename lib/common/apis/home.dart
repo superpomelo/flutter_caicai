@@ -1,5 +1,6 @@
 import 'package:flutter_caicai/common/entitys/entitys.dart';
 import 'package:flutter_caicai/common/entitys/home_detail_commetlist.dart';
+import 'package:flutter_caicai/common/entitys/home_detail_subcommentlist.dart';
 import 'package:flutter_caicai/common/utils/utils.dart';
 
 class TuiJAPI {
@@ -16,11 +17,19 @@ class TuiJAPI {
     return HomeDetailResponseEntity.fromJson(response);
   }
 
-  ///首页详情获取评论列表
+  ///首页详情获取评论楼列表
   static Future<HomeDetailCommentlistResponseEntity> homedetailcommentlist(
       {required HomeDetailCommentlistRequestEntity params}) async {
     var response =
         await HttpUtil().post('/home/detail/commentlist', params: params);
     return HomeDetailCommentlistResponseEntity.fromJson(response);
+  }
+
+  ///首页详情获取评论楼中楼列表
+  static Future<HomeDetailSubcommentlistEntity> homedetailsubcommentlist(
+      {required HomeDetailSubcommentlistRequestEntity params}) async {
+    var response =
+        await HttpUtil().post('/home/detail/subcommentlist', params: params);
+    return HomeDetailSubcommentlistEntity.fromJson(response);
   }
 }
