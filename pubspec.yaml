@@ -82,7 +82,13 @@ dependencies:
   
   #get
   get: ^4.6.1
+  
+  # 图片选择插件（仿微信） https://pub.flutter-io.cn/packages/wechat_assets_picker
+  wechat_assets_picker: ^7.2.0
 
+  # 图片编辑器 https://pub.flutter-io.cn/packages/image_editor
+  image_editor: ^1.0.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
