@@ -46,6 +46,13 @@ dependencies:
 
   # 轮播图 
   liquid_swipe: ^2.1.1 
+
+  # 下拉刷新，加载更多
+  # https://pub.flutter-io.cn/packages/pull_to_refresh
+  pull_to_refresh: ^2.0.0
+
+  # https://pub.flutter-io.cn/packages/helpers
+  helpers: ^1.1.4
   
   # ui
   flutter_easyrefresh: ^2.1.0
@@ -89,6 +96,8 @@ dependencies:
   # 图片编辑器 https://pub.flutter-io.cn/packages/image_editor
   image_editor: ^1.0.2
   
+    # https://pub.flutter-io.cn/packages/video_editor
+  video_editor: ^1.4.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
