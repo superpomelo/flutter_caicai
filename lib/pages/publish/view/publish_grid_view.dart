@@ -2,7 +2,7 @@
  * @Author: yhl
  * @Date: 2022-05-24 13:39:08
  * @LastEditors: superpomelo 
- * @LastEditTime: 2022-08-16 16:26:39
+ * @LastEditTime: 2022-08-25 14:51:36
  * @Description: 发布-上传图片/视频视图
  */
 
@@ -76,46 +76,46 @@ class PublishGridView {
 
     return Container(
       padding: EdgeInsets.only(
-          top: duSetWidth(12),
+          top: duSetWidth(0),
           bottom: duSetWidth(18),
           left: duSetWidth(18),
           right: duSetWidth(18)),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text.rich(
-                TextSpan(
-                  text: '上传图片/视频',
-                  style: TextStyle(
-                    color: const Color(0xFF0B0E11),
-                    fontSize: duSetFontSize(16),
-                    fontWeight: FontWeight.bold,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: '（750*750）',
-                      style: TextStyle(
-                        color: const Color(0xFF8E8E93),
-                        fontSize: duSetFontSize(12),
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Text(
-                '$_count/9',
-                style: TextStyle(
-                  color: const Color(0xFF0B0E11),
-                  fontSize: duSetFontSize(14),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
-          ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   crossAxisAlignment: CrossAxisAlignment.center,
+          //   children: [
+          //     Text.rich(
+          //       TextSpan(
+          //         text: '上传图片/视频',
+          //         style: TextStyle(
+          //           color: const Color(0xFF0B0E11),
+          //           fontSize: duSetFontSize(16),
+          //           fontWeight: FontWeight.bold,
+          //         ),
+          //         children: [
+          //           TextSpan(
+          //             text: '（750*750）',
+          //             style: TextStyle(
+          //               color: const Color(0xFF8E8E93),
+          //               fontSize: duSetFontSize(12),
+          //               fontWeight: FontWeight.bold,
+          //             ),
+          //           )
+          //         ],
+          //       ),
+          //     ),
+          //     Text(
+          //       '$_count/9',
+          //       style: TextStyle(
+          //         color: const Color(0xFF0B0E11),
+          //         fontSize: duSetFontSize(14),
+          //         fontWeight: FontWeight.w500,
+          //       ),
+          //     ),
+          //   ],
+          // ),
           // SizedBox(height: 14.w),
           // GridView.count(
           //   shrinkWrap: true,
@@ -132,7 +132,7 @@ class PublishGridView {
             physics: const NeverScrollableScrollPhysics(),
             padding: EdgeInsets.only(top: duSetWidth(14)),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+              crossAxisCount: 4,
               mainAxisSpacing: duSetWidth(10),
               crossAxisSpacing: duSetWidth(7),
               childAspectRatio: 1.0,
@@ -236,7 +236,7 @@ class PublishGridView {
       child: Icon(
         Icons.add,
         color: const Color(0xFFE3E3E5),
-        size: duSetWidth(60),
+        size: duSetWidth(30),
       ),
     );
 
@@ -386,7 +386,7 @@ class PublishGridView {
               child: Icon(
                 Icons.close,
                 color: Colors.white,
-                size: duSetWidth(18),
+                size: duSetWidth(12),
               ),
             ),
           ),
@@ -442,7 +442,7 @@ class PublishGridView {
             child: Icon(
               Icons.close,
               color: Colors.white,
-              size: duSetWidth(18),
+              size: duSetWidth(12),
             ),
           ),
         ),
